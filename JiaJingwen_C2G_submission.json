@@ -1,0 +1,37 @@
+{
+  "author": "贾静文",
+  "github_id": "ZayneWenner",
+  "name": "SP8192 + 7L512d (Route A, pending measurement)",
+  "blurb": "SP8192 tokenizer upgrade with layer count reduced 9->7 to stay under the 16,000,000-byte artifact cap. Single-axis change; no TTT, no SLOT, no ETLB, no n-gram cache. Target Level 2 (<1.18 BPB). Measurements pending: no local GPU available, all runs must be executed on 8xH100.",
+  "date": "2026-11-27",
+  "track": "10min_16mb",
+  "val_loss": null,
+  "val_bpb": null,
+  "val_bpb_std": null,
+  "seeds": [1, 42, 1337],
+  "seed_results": [
+    { "seed": 1,    "val_loss": null, "val_bpb": null, "artifact_bytes": null, "steps": null, "train_time_ms": null, "status": "pending" },
+    { "seed": 42,   "val_loss": null, "val_bpb": null, "artifact_bytes": null, "steps": null, "train_time_ms": null, "status": "pending" },
+    { "seed": 1337, "val_loss": null, "val_bpb": null, "artifact_bytes": null, "steps": null, "train_time_ms": null, "status": "pending" }
+  ],
+  "hardware": "8xH100 80GB SXM",
+  "pytorch_version": "2.11.0+cu130",
+  "bytes_total": null,
+  "bytes_code": 47686,
+  "measurement_status": "not_measured",
+  "measurement_note": "本文件为提交骨架。截至 2026-11-27 所在机器无 CUDA 设备（nvidia-smi 不存在）、无 PyTorch，无法产出真实 BPB。所有成绩字段刻意置为 null，未用任何文献值或他人成绩填充。回填方式见 方案设计.md 第 5 节第 6 步。",
+  "reference_points": {
+    "official_baseline_val_bpb": 1.2243657,
+    "official_baseline_bytes_total": 15863489,
+    "official_baseline_source": "records/track_10min_16mb/2026-03-17_NaiveBaseline/submission.json",
+    "reported_leader_val_bpb": 1.08279384,
+    "level2_target": 1.18,
+    "level3_target": 1.12
+  },
+  "compliance": {
+    "artifact_under_16mb": null,
+    "training_under_600s": null,
+    "three_seeds": null,
+    "note": "三项均待实测后填写，不预先声明为 true。"
+  }
+}
